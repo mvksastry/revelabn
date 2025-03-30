@@ -49,7 +49,7 @@
 								<div class="card-header">
 									<h3 class="card-title">
 									<i class="fas fa-chart-pie mr-1"></i>
-									Active
+									Reports
 									</h3>
 									<div class="card-tools">
 										<ul class="nav nav-pills ml-auto">
@@ -63,42 +63,30 @@
 									<div class="tab-content p-0">
 										<!-- Morris chart - Sales -->
 										<div class="table-responsive" id="revenue-chart2" style="position: relative;">
-											@if(count($actvProjs) > 0)
+											@if(count($all_reports) > 0)
 											<table id="userIndex2" class="table table-sm table-bordered table-hover">
 												<thead>
 													<tr bgcolor="#BBDEFB">												
 														<th style="text-align:center;">ID</th>
-														<th class="col-6">Title</th>                       
+														<th>Title</th> 
+														<th>Type</th>                       
 														<th>Start Date</th>
 														<th>End Date</th>
-														<th>Approved On</th>
-														<th>Budget</th>
-														<th>Approved Letter</th>
-														<th>Project File</th>
+														<th>Submitted On</th>
 														<th>Action</th>
 													</tr>
 												</thead>
 												<tbody>
-													@foreach($actvProjs as $row)
-													<tr bgcolor="#E1BEE7"   data-entry-id="">
-														<td>{{ $row->resproject_id }}</td>
-														<td>{{ $row->title }}</td>
-														<td>{{ $row->start_date }}</td>
-														<td>{{ $row->end_date }}</td>
-														<td>{{ $row->date_approved }}</td>
+													@foreach($all_reports as $row)
+													<tr bgcolor="#E1BEE7" data-entry-id="">
+														<td>{{ $row->report_id }}</td>
+														<td>{{ $row->report_title }}</td>
+														<td>{{ ucfirst($row->report_type) }}</td>
+														<td>{{ date('d-m-Y', strtotime($row->date_from)) }}</td>
+														<td>{{ date('d-m-Y', strtotime($row->date_to)) }}</td>
+														<td>{{ date('d-m-Y', strtotime($row->submitted_date)) }}</td>
 														<td>
-															Total:{{ $row->budget_total }}
-															</br>
-															Euip:{{ $row-> budget_equipment }}
-															</br>
-															Consumables:{{ $row->budget_consumable }}
-															</br>
-															Contingency:{{ $row->budget_contigency }}
-														</td>
-														<td>{{ $row->sanction_letter_file }}</td>
-														<td>{{ $row->research_project_file }}</td>
-														<td>
-															<a href="#">
+															<a href="{{ route('downloads.resProjectFile',[$row->report_uuid]) }}">
 																<button class="btn btn-sm btn-info">
 																Download
 																</button>

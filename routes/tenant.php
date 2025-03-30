@@ -147,6 +147,8 @@ Route::middleware([
     Route::resource('/reports',        ReportsController::class);
     Route::get('downloads/maintenanceFile/{file_info}', [App\Http\Controllers\Common\DownloadsController::class, 'maintenanceFile'])
               ->name('downloads.maintenanceFile');
+    Route::get('downloads/resProjectFile/{report_uuid}', [App\Http\Controllers\Common\DownloadsController::class, 'resProjectFile'])
+              ->name('downloads.resProjectFile');
 
     //-- Paid Subscription Based Routes --//
       Route::middleware(['subscribed'])->group(function () {

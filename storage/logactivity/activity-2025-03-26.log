@@ -1,0 +1,151 @@
+[2025-03-26 05:36:41] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 05:36:44] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 05:42:38] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 05:42:41] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 05:45:36] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 05:45:39] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 05:53:53] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 05:53:56] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 05:55:41] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 05:55:44] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 05:59:04] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 05:59:07] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:01:43] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:01:46] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:11:50] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:11:53] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:12:09] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:12:12] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:14:32] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:14:34] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:15:20] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:15:23] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:21:45] local.INFO: [ demo ] [ Demo PISG ] reset form for group task  
+[2025-03-26 06:21:45] local.INFO: [ demo ] [ Demo PISG ] saved task by [ 2 ]  
+[2025-03-26 06:21:45] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:27:18] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:27:21] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:28:05] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:28:08] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:28:27] local.INFO: [ demo ] [ Demo PISG ] reset form for group task  
+[2025-03-26 06:28:27] local.INFO: [ demo ] [ Demo PISG ] saved task by [ 2 ]  
+[2025-03-26 06:28:27] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:29:02] local.INFO: [ demo ] [ Demo PISG ] task status marked as done for id [ 1 ]  
+[2025-03-26 06:29:02] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:29:05] local.INFO: [ demo ] [ Demo PISG ] task status marked as done for id [ 2 ]  
+[2025-03-26 06:29:05] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:29:15] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:29:17] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:30:26] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:30:29] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:32:48] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:32:51] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:34:16] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:34:19] local.INFO: [ demo ] [ Demo PISG ] Displayed Group Task from to user  
+[2025-03-26 06:34:41] local.INFO: Tenant ID [ demo ] For User [ Demo PISG ] Displayed current themes  
+[2025-03-26 06:34:43] local.INFO: [ demo ] [ Demo PISG ] displayed Experiment list  
+[2025-03-26 06:34:47] local.INFO: [ demo ] [ Demo PISG ] Displayed Info for Experiment [1]  
+[2025-03-26 06:34:47] local.INFO: [ demo ] [ Demo PISG ] Displayed Info for Experiment [ 1 ]  
+[2025-03-26 09:34:52] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 10:01:21] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 10:39:56] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 10:40:03] local.INFO: [ demo ] [ Demo PISG ] New Infra form displayed  
+[2025-03-26 10:40:38] local.INFO: [ demo ] [ Demo PISG ] New Infra form displayed  
+[2025-03-26 10:41:24] local.INFO: [ demo ] [ Demo PISG ] New Infra form displayed  
+[2025-03-26 10:44:49] local.INFO: [ demo ] [ Demo PISG ] New Infra form displayed  
+[2025-03-26 10:45:24] local.INFO: [ demo ] [ Demo PISG ] New Infra form displayed  
+[2025-03-26 10:46:34] local.INFO: [ demo ] [ Demo PISG ] New Infra form displayed  
+[2025-03-26 11:00:16] local.INFO: [ demo ] [ Demo PISG ] New Infra form displayed  
+[2025-03-26 11:01:59] local.INFO: [ demo ] [ Demo PISG ] New Infra form displayed  
+[2025-03-26 11:54:53] local.INFO: [ demo ] [ Demo PISG ] New Infra form displayed  
+[2025-03-26 14:46:34] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 14:46:38] local.INFO: [ demo ] [ Demo PISG ] New Infra form displayed  
+[2025-03-26 14:50:17] local.INFO: [ demo ] [ Demo PISG ] New Infra form displayed  
+[2025-03-26 14:50:26] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 15:51:37] local.INFO: [ demo ] [ Demo PISG ] saved new Infra item [RC 5F]  
+[2025-03-26 15:51:53] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 15:53:30] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 15:54:06] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 15:54:50] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 15:56:22] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 15:58:27] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 15:58:57] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 16:00:38] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 16:00:42] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 16:06:26] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 16:06:53] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 16:12:15] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 16:12:47] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 16:14:25] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 16:15:37] local.INFO: [ demo ] [ Demo PISG ] Infrastructure home page displayed  
+[2025-03-26 16:38:30] local.INFO: [ demo ] [ Demo PISG ] editing Infra item [1]  
+[2025-03-26 16:38:49] local.INFO: [ demo ] [ Demo PISG ] editing Infra item [1]  
+[2025-03-26 16:39:20] local.INFO: [ demo ] [ Demo PISG ] editing Infra item [1]  
+[2025-03-26 16:48:17] local.INFO: [ demo ] [ Demo PISG ] editing Infra item [1]  
+[2025-03-26 16:52:40] local.INFO: [ demo ] [ Demo PISG ] editing Infra item [1]  
+[2025-03-26 16:53:26] local.INFO: [ demo ] [ Demo PISG ] editing Infra item [1]  
+[2025-03-26 16:54:14] local.INFO: [ demo ] [ Demo PISG ] editing Infra item [1]  
+[2025-03-26 16:55:03] local.INFO: [ demo ] [ Demo PISG ] editing Infra item [1]  
+[2025-03-26 16:55:54] local.INFO: [ demo ] [ Demo PISG ] editing Infra item [1]  
+[2025-03-26 16:56:50] local.INFO: [ demo ] [ Demo PISG ] editing Infra item [1]  
+[2025-03-26 19:07:05] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:07:10] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:16:53] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:16:57] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:18:45] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:18:50] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:20:39] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:20:43] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:21:09] local.INFO: [ demo ] [ Demo PISG ] Infr id selected [ 1 ]  
+[2025-03-26 19:21:09] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:24:51] local.INFO: [ demo ] [ Demo PISG ] Infr id selected [ 1 ]  
+[2025-03-26 19:24:51] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:30:09] local.INFO: [ demo ] [ Demo PISG ] Infr id selected [ 1 ]  
+[2025-03-26 19:30:09] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:35:00] local.INFO: [ demo ] [ Demo PISG ] Infr id selected [ 1 ]  
+[2025-03-26 19:35:00] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:36:09] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:36:14] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:36:19] local.INFO: [ demo ] [ Demo PISG ] Infr id selected [ 1 ]  
+[2025-03-26 19:36:19] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:38:10] local.INFO: [ demo ] [ Demo PISG ] Infr id selected [ 1 ]  
+[2025-03-26 19:38:10] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:44:54] local.INFO: [ demo ] [ Demo PISG ] Infr id selected [ 1 ]  
+[2025-03-26 19:44:54] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:48:21] local.INFO: [ demo ] [ Demo PISG ] Infr id selected [ 1 ]  
+[2025-03-26 19:48:21] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:51:30] local.INFO: [ demo ] [ Demo PISG ] Infr id selected [ 1 ]  
+[2025-03-26 19:51:30] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:54:36] local.INFO: [ demo ] [ Demo PISG ] Infr id selected [ 1 ]  
+[2025-03-26 19:54:36] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:55:42] local.INFO: [ demo ] [ Demo PISG ] Infr id selected [ 1 ]  
+[2025-03-26 19:55:42] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:55:59] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:56:40] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:58:24] local.INFO: [ demo ] [ Demo PISG ] Infr id selected [ 1 ]  
+[2025-03-26 19:58:24] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:59:06] local.INFO: [ demo ] [ Demo PISG ] Infr id selected [ 1 ]  
+[2025-03-26 19:59:06] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:59:41] local.INFO: [ demo ] [ Demo PISG ] Infr id selected [ 1 ]  
+[2025-03-26 19:59:41] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:59:52] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:59:56] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 19:59:59] local.INFO: [ demo ] [ Demo PISG ] Infr id selected [ 1 ]  
+[2025-03-26 19:59:59] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 20:02:57] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 20:03:02] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 20:03:10] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 20:03:13] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 20:03:22] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 20:03:35] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 20:09:41] local.INFO: [ demo ] [ Demo PISG ] Infr id selected [ 1 ]  
+[2025-03-26 20:09:41] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 20:11:16] local.INFO: [ demo ] [ Demo PISG ] new logbook entry for Infra id [ 1 ] saved  
+[2025-03-26 20:11:16] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 20:26:11] local.INFO: [ demo ] [ Demo PISG ] Infr id selected [ 1 ]  
+[2025-03-26 20:26:11] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 20:27:44] local.INFO: [ demo ] [ Demo PISG ] Infr id selected [ 1 ]  
+[2025-03-26 20:27:44] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 20:29:01] local.INFO: [ demo ] [ Demo PISG ] Infr id selected [ 1 ]  
+[2025-03-26 20:29:01] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  
+[2025-03-26 20:33:49] local.INFO: [ demo ] [ Demo PISG ] Log Book page displayed  

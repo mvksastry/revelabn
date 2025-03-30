@@ -1,0 +1,71 @@
+	
+Security & Access	
+Role based access	
+Permissions: Configurable individual, task oriented permissions linked to the role, At present it is role based access.	
+Role based Dashboards display the information and tasks on-hand with simple login	
+	
+Electronic Lab Notebook	
+Every Project has many themes of investigation, every theme has many experiments, every Experiment has so many ingredients. Practically, every idea conceived can be recorded.	
+Comprehensive Project Management, Online records of experiments, track information accurately till its	
+end, everything recorded chronologically along with its associated files	
+Record pictures, audio/ and video data, activity linked document management linked to experiments	
+Individual Project report uploads and Report generation(can be Customizable)	
+Monitoring of project cost (Only consumable, equipment at present), Travel and manpower modules available.	
+Can be exported as and when required	
+	
+Inventory	
+Most efficient way to track all the inventory acquired, date of utilization, accurate quantity tracking, 	
+Threshold setting for reordering, replenishment reordering	
+Inventory cost monitoring	
+	
+	
+Reagents	
+Complete record of reagent development, giving the information of the procedure of making, remaking the	
+same with one click	
+Cumulative records of earlier preparation, volume prepared, volume desired.	
+Reagents and inventory of reagents consumed in the experiments tracked automatically.	
+	
+Sample Management	
+Comprehensive sample management with information on storage and retrieval	
+Record every minute detail of every sample, its precise location, its location, its time of inception, its end use,	
+its incharge of the room	
+Sample usage in the experiment, how it is used and by whom it is used is all recorded	
+	
+Infrastructure Management	
+Tracks the status of all the equipment, usage with electronic log-book	
+Track maintenance records, service manuals, annual maintenance contracts etc.,	
+Maintenance schedules are tracked and gives the remainder to the investigator	
+	
+Logbook	
+Record the usage of laboratory instruments usage, who used, when used, date and time	
+Calculating the total time of usage	
+	
+Reports	
+Customized reports based on the required to be developed	
+	
+Events	
+This application tracks the personal or group activities with event calendar, sending reminder	
+alerts to track status of activities	
+	
+User Management	
+Creation and management of users, assignment of projects with expiry dates	
+Administrator can block users	
+	
+Quality Management	
+Every record can be linked to a Standard Operating Procedures/Protocols leading to the implementation	
+	
+Audit Trails and Security	
+Logs all the activities including page views	
+Tracks malicious activities	
+Tracks threats, blockade of IP addresses	
+Custom encryption is possible	
+	
+Backups and Maintenance	
+Automated daily Backups	
+Full data privacy, security, no system emails except user registration.	
+No trespassing at all	
+	
+	
+	
+	
+

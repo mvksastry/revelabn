@@ -86,7 +86,7 @@
 														<td>{{ date('d-m-Y', strtotime($row->date_to)) }}</td>
 														<td>{{ date('d-m-Y', strtotime($row->submitted_date)) }}</td>
 														<td>
-															<a href="{{ route('downloads.resProjectFile',[$row->report_uuid]) }}">
+															<a href="{{ route('downloads.resProjReportFile',[$row->report_uuid]) }}">
 																<button class="btn btn-sm btn-info">
 																Download
 																</button>

@@ -145,10 +145,17 @@ Route::middleware([
     Route::resource('/infrastructure', InfrastructureController::class);
     Route::resource('/maintenance',    MaintenanceController::class);
     Route::resource('/reports',        ReportsController::class);
+
+    //-- Download routes --//
     Route::get('downloads/maintenanceFile/{file_info}', [App\Http\Controllers\Common\DownloadsController::class, 'maintenanceFile'])
               ->name('downloads.maintenanceFile');
     Route::get('downloads/resProjectFile/{report_uuid}', [App\Http\Controllers\Common\DownloadsController::class, 'resProjectFile'])
               ->name('downloads.resProjectFile');
+    Route::get('downloads/resProjApprovalFile/{file_name}', [App\Http\Controllers\Common\DownloadsController::class, 'resProjApprovalFile'])
+              ->name('downloads.resProjApprovalFile');
+    Route::get('downloads/resProjReportFile/{file_name}', [App\Http\Controllers\Common\DownloadsController::class, 'resProjReportFile'])
+              ->name('downloads.resProjReportFile');
+    //-- End of Download route --//
 
     //-- Paid Subscription Based Routes --//
       Route::middleware(['subscribed'])->group(function () {

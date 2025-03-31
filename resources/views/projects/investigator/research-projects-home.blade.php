@@ -69,14 +69,13 @@
 												<thead>
 													<tr bgcolor="#BBDEFB">												
 														<th style="text-align:center;">ID</th>
-														<th class="col-6">Title</th>                       
+														<th>Title</th>                       
 														<th>Start Date</th>
 														<th>End Date</th>
 														<th>Approved On</th>
 														<th>Budget</th>
 														<th>Approved Letter</th>
 														<th>Project File</th>
-														<th>Action</th>
 													</tr>
 												</thead>
 												<tbody>
@@ -96,12 +95,18 @@
 															</br>
 															Contingency:{{ $row->budget_contigency }}
 														</td>
-														<td>{{ $row->sanction_letter_file }}</td>
-														<td>{{ $row->research_project_file }}</td>
 														<td>
-															<a href="#">
+															<a href="{{ route('downloads.resProjApprovalFile',[$row->sanction_letter_file]) }}">
 																<button class="btn btn-sm btn-info">
-																Download
+																	Approval Letter
+																</button>
+															</a>
+															
+														</td>
+														<td>
+															<a href="{{ route('downloads.resProjectFile',[ $row->research_project_file ]) }}">
+																<button class="btn btn-sm btn-info">
+																	Project File
 																</button>
 															</a>
 														</td>

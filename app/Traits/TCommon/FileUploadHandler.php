@@ -29,25 +29,24 @@ trait FileUploadHandler
 
 		public function projFileUpload($request, $resproject_id)
 		{
-			$oExt = ".".$request->file('resprojfile')->getClientOriginalExtension();
+			$oExt = $request->file('resprojfile')->getClientOriginalExtension();
 
 			$destPath = "/public/".$this->projectIdFolder($resproject_id);
-			$projFileName = $resproject_id."_".$this->generateCode(15).$oExt;
-			$this->result['research_project_file'] = $projFileName;
+			$projFileName = $resproject_id."_".$this->generateCode(15).".".$oExt;
+			$result['research_project_file'] = $projFileName;
 			
 			try {
 					// Attempt file upload
 					$path = $request->file('resprojfile')->storeAs($destPath, $projFileName);
-					$this->result['project_file_path'] = $destPath;
+					$result['project_file_path'] = $destPath;
 					Log::channel('activity')->info("[ ".Auth::user()->name." ] uploaded project file name [ ".$projFileName." ]");
-					$this->result['upload_status'] = true;
+					$result['upload_status'] = true;
 			} catch (\Exception $e) {
 					// Show a user-friendly message
 					Log::channel('activity')->info("[ ".Auth::user()->name." ] project file upload failed [ ".$projFileName." ]");
-					$this->result['upload_status'] = false;
+					$result['upload_status'] = false;
 			}
-
-			return $this->result;
+			return $result;
 		}
 
 		public function resprojAppLettFileUpload($request, $resproject_id)

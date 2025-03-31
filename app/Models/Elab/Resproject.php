@@ -22,6 +22,7 @@ class Resproject extends Model
      * @var array
      */
     protected $fillable = [
+        'uuid',
         'pi_id',
         'title',
         'start_date',

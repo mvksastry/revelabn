@@ -60,7 +60,7 @@ trait FileUploadHandler
 
 			$path = $request->file('appletterfile')->storeAs($destPath, $filename);
 			$result['sanction_file_path'] = $destPath;
-
+			$result['upload_status'] = true;
 			Log::channel('activity')->info('[ '.tenant('id')." ] [ ".Auth::user()->name.' ] Res project approval letter [ '.$filename.']');
 			return $result;
 		}

@@ -6,7 +6,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
-
+//Uuid import class
+use Illuminate\Support\Str;
 
 use App\Models\Elab\Resproject;
 
@@ -15,7 +16,6 @@ use App\Traits\Base;
 use App\Traits\TCommon\Notes;
 use App\Traits\TCommon\FileUploadHandler;
 use App\Traits\TElab\ResearchProjectPermission;
-
 
 trait ResearchProjectSubmission
 {
@@ -72,6 +72,7 @@ trait ResearchProjectSubmission
             {
                 //make the array for database insert query
                 $resProj                = new Resproject();
+                $resProj->uuid          = Str::uuid()->toString();
                 $resProj->pi_id         = Auth::user()->id;
                 $resProj->title         = $title;
                 $resProj->start_date    = $StDate;
@@ -103,9 +104,9 @@ trait ResearchProjectSubmission
                 if( $request->hasFile('resprojfile') )
                 {
                     $res1 = $this->uploadProjectFile($request, $resproject_id);
-                    if($res1['update_status'])
+                    if($res1['upload_status'])
                     {   
-                        unset($res1['update_status']);
+                        unset($res1['upload_status']);
                         $final_result = Resproject::where('resproject_id', $resproject_id)->update($res1);
                     }
                 }
@@ -113,9 +114,9 @@ trait ResearchProjectSubmission
                 if( $request->hasFile('appletterfile') )
                 {
                     $res2 = $this->uploadApprovalLetterFile($request, $resproject_id);
-                    if($res2['update_status'])
+                    if($res2['upload_status'])
                     {   
-                        unset($res2['update_status']);
+                        unset($res2['upload_status']);
                         $final_result = Resproject::where('resproject_id', $resproject_id)->update($res2);
                     }
                 }

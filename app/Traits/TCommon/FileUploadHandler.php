@@ -51,18 +51,18 @@ trait FileUploadHandler
 
 		public function resprojAppLettFileUpload($request, $resproject_id)
 		{
-			$oExt = ".".$request->file('appletterfile')->getClientOriginalExtension();
+			$oExt = $request->file('appletterfile')->getClientOriginalExtension();
 
 			$destPath = "/public/".$this->projectIdFolder($resproject_id);
-			$filename = $resproject_id."_approval_".$this->generateCode(15).$oExt;
+			$filename = $resproject_id."_approval_".$this->generateCode(15).".".$oExt;
 
-			$this->result['sanction_letter_file'] = $filename;
+			$result['sanction_letter_file'] = $filename;
 
 			$path = $request->file('appletterfile')->storeAs($destPath, $filename);
-			$this->result['sanction_file_path'] = $destPath;
+			$result['sanction_file_path'] = $destPath;
 
 			Log::channel('activity')->info('[ '.tenant('id')." ] [ ".Auth::user()->name.' ] Res project approval letter [ '.$filename.']');
-			return $this->result;
+			return $result;
 		}
 
 		public function resprojReportFileUpload($request, $resproject_id)
@@ -102,18 +102,18 @@ trait FileUploadHandler
         
 		public function uploadExptImageFiles($request, $resproject_id, $theme_id, $experiment_id)
 		{
-			$oExt = ".".$request->file('userfile')->getClientOriginalExtension();
+			$oExt = $request->file('userfile')->getClientOriginalExtension();
 
 			$destPath = "/pulic/".$this->experimentImagesFolder($resproject_id, $theme_id, $experiment_id);
 
 			$fileName = $resproject_id."_image_".$this->generateCode(8).".".$oExt;
-			$this->result['expt_image_file'] = $fileName;
+			$result['expt_image_file'] = $fileName;
 
 			$path = $request->file('userfile')->storeAs($destPath, $fileName);
-			$this->result['expt_image_file_path'] = $destPath;
+			$result['expt_image_file_path'] = $destPath;
 
 			Log::channel('activity')->info('[ '.tenant('id')." ] [ ".Auth::user()->name.' ] uploaded Expt Image File [ '.$fileName.']');
-			return $this->result;
+			return $result;
 		}
 		
 		/**
@@ -125,10 +125,10 @@ trait FileUploadHandler
 
 		public function iaecProjFileUpload($request, $iaecproject_id)
 		{
-			$oExt = ".".$request->file('userfile')->getClientOriginalExtension();
+			$oExt = $request->file('userfile')->getClientOriginalExtension();
 
 			$destPath = "/public/".$this->projectIdFolder($iaecproject_id);
-			$projFileName = $iaecproject_id."_".$this->generateCode(15).$oExt;
+			$projFileName = $iaecproject_id."_".$this->generateCode(15).".".$oExt;
 
 			$this->result['iaecproject_filename'] = $projFileName;
 			
@@ -141,10 +141,10 @@ trait FileUploadHandler
 
 		public function soProcedureFileUpload($fileObj)
 		{
-			$oExt = ".".$fileObj->getClientOriginalExtension();
+			$oExt = $fileObj->getClientOriginalExtension();
 
 			$destPath = "/public/".$this->sopFolderProcedures();
-			$fileName = "SOP_".$this->generateCode(8).$oExt;
+			$fileName = "SOP_".$this->generateCode(8).".".$oExt;
 
 			$this->result['fileName'] = $fileName;
 
@@ -157,10 +157,10 @@ trait FileUploadHandler
 
 		public function soProtocolFileUpload($fileObj)
 		{
-			$oExt = ".".$fileObj->getClientOriginalExtension();
+			$oExt = $fileObj->getClientOriginalExtension();
 
 			$destPath = "/public/".$this->sopFolderProtocols();
-			$fileName = "SOP_".$this->generateCode(8).$oExt;
+			$fileName = "SOP_".$this->generateCode(8).".".$oExt;
 
 			$this->result['fileName'] = $fileName;
 

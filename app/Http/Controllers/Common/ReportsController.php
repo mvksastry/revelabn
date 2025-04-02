@@ -121,7 +121,7 @@ class ReportsController extends Controller
         Log::channel('activity')->info('[ '.tenant('id')." ] [ ".Auth::user()->name.' ] displayed reports for project id [ '.$id.' ]');
         
 		//dd($reports);
-		return view('reports.showProject')
+		return view('reports.showReports')
 						->with(['projectById' => $projectById, 'reports' => $reports ]);
     }
     /**

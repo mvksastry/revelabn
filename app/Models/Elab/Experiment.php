@@ -66,7 +66,7 @@ class Experiment extends Model
 	
     public function exptfiles()
     {
-        return $this->hasMany(Exptfile::class, 'experiment_id', 'experiment_id');
+        return $this->hasMany(Labfile::class, 'experiment_id', 'experiment_id');
     }
     
     public function exptnotes()

@@ -192,11 +192,11 @@
           <div class="form-group">
             <label for="resprojfile">Files</label>
             <div class="custom-file">
-              <input type="file" class="custom-file-input" file="true", enctype="multipart/form-data" name="resprojfile" id="resprojfile">
-              <label class="custom-file-label" for="resprojfile">Choose File</label>
-              @if($errors->has('resprojfile'))
-                <p class="help-block text-red">
-                {{ $errors->first('resprojfile') }}
+              <input multiple wire:model="exptFiles" type="file" class="custom-file-input" file="true", enctype="multipart/form-data" name="exptFiles" id="exptFiles">
+              <label class="custom-file-label" for="exptFiles">Choose File</label>
+              @if($errors->has('exptFiles'))
+                <p class="help-block text-danger">
+                {{ $errors->first('exptFiles') }}
                 </p>
               @endif
             </div>
@@ -213,3 +213,8 @@
     </tr>  
   </tbody>
 </table>
+<script>
+  $(function () {
+    bsCustomFileInput.init();
+  });
+  </script>

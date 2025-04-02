@@ -301,17 +301,10 @@ return [
     */
 
     'topnav' => [
-        // Navbar items:
 
     ],
 
     'menu' => [
-        [
-            'text' => 'Home',
-            'topnav' => true,
-            'icon' => '',
-            'classes' => 'nav-item d-none d-sm-inline-block',
-        ],
 
         [
             'text' => 'Language',
@@ -323,11 +316,13 @@ return [
                     'icon' => 'flag-icon flag-icon-us',
                     'url'=> '#'
                 ],
+                /*
                 [
                     'text'=>'Hindi',
                     'icon' => 'flag-icon flag-icon-kh',
                     'url'=> '#'
                 ]
+                */
             ]
         ],
 
@@ -518,6 +513,18 @@ return [
             ]
         ],
         
+        [
+            'text' => 'Images',
+            'url' => 'admin/settings',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
+
+        [
+            'text' => 'Documents',
+            'url' => 'admin/settings',
+            'icon' => 'fas fa-fw fa-lock',
+        ],
+
         [
             'text' => 'iaec-projects',
             'url' => 'admin/settings',

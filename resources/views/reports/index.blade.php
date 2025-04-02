@@ -64,7 +64,7 @@
 										<!-- Morris chart - Sales -->
 										<div class="table-responsive" id="revenue-chart2" style="position: relative;">
 											@if(count($all_reports) > 0)
-											<table id="userIndex2" class="table table-sm table-bordered table-hover">
+											<table id="example1" class="table table-sm table-bordered table-hover">
 												<thead>
 													<tr bgcolor="#BBDEFB">												
 														<th style="text-align:center;">ID</th>
@@ -128,140 +128,127 @@
 									<div class="tab-content p-0">
 										<!-- Morris chart - Sales -->
 										<div class="table-responsive" id="revenue-chart2" style="position: relative;">
+											<form method="POST" action="{{route('reports.store')}}" enctype ="multipart/form-data">
+												@csrf
+												<div class="card-body">
+													<div class="row">
+														<div class="col-sm-6">
+															<div class="form-group">
+																<label for="report_type">Project*</label>
+																<select class="custom-select form-control-border" placeholder="Report Type"
+																value="{{old('resproject_id')}}" name="resproject_id" id="resproject_id">
+																	<option value="select">Select</option>
+																	@foreach($actvProjs as $row)
+																	<option value="{{ $row->resproject_id }}">{{ $row->title }}</option>
+																	@endforeach
+																</select>
+																@if($errors->has('resproject_id'))
+																	<p class="help-block text-danger">
+																	{{ $errors->first('resproject_id') }}
+																	</p>
+																@endif  
+															</div>
+														</div>
 
+														<div class="col-sm-6">
+															<div class="form-group">
+																<label for="report_type">Report Type*</label>
+																<select class="custom-select form-control-border" placeholder="Report Type"
+																	value="{{old('report_type')}}" name="report_type" id="report_type">
+																	<option value="0">Select</option>
+																	<option value="weekly">Weekly</option>
+																	<option value="monthly">Monthly</option>
+																	<option value="quarter">Quarterly</option>
+																	<option value="half_year">Half Year</option>
+																	<option value="annual">annual</option>
+																	<option value="completion">Completion</option>
+																	<option value="special">Special</option>
+																</select>
+																@if($errors->has('report_type'))
+																	<p class="help-block text-red">
+																	{{ $errors->first('report_type') }}
+																	</p>
+																@endif  
+															</div>
+														</div>
+													</div>
 
-                      <div class="p-2">
-                        <form method="POST" action="{{route('reports.store')}}" enctype ="multipart/form-data">
-                          @csrf
-                          <div class="card-body">
-                            <div class="row">
-                              <div class="col-sm-6">
-                                <div class="form-group">
-                                  <label for="report_type">Project*</label>
-                                  <select class="custom-select form-control-border" placeholder="Report Type"
-                                  value="{{old('resproject_id')}}" name="resproject_id" id="resproject_id">
-                                    <option value="select">Select</option>
-                                    @foreach($actvProjs as $row)
-                                    <option value="{{ $row->resproject_id }}">{{ $row->title }}</option>
-                                    @endforeach
-                                  </select>
-                                  @if($errors->has('resproject_id'))
-                                    <p class="help-block text-danger">
-                                    {{ $errors->first('resproject_id') }}
-                                    </p>
-                                  @endif  
-                                </div>
-                              </div>
+													<div class="row">
+														<div class="col-sm-12">
+															<div class="form-group">
+																<label for="report_title">Report Title*</label>
+																<input type="text" class="form-control" value="{{old('report_title')}}" id="report_title" name="report_title" placeholder= "Project title">
+																@if($errors->has('report_title'))
+																	<p class="help-block text-red">
+																	{{ $errors->first('report_title') }}
+																	</p>
+																@endif
+															</div>
+														</div>
+													</div>
 
+													<div class="row">
+														<div class="col-sm-4">
+															<div class="form-group">
+																<label for="start_date">From Date*</label>
+																<input type="date" class="form-control" value="{{old('date_from')}}" id="date_from" name="date_from" placeholder= "From Date">
+																@if($errors->has('date_from'))
+																	<p class="help-block text-red">
+																	{{ $errors->first('date_from') }}
+																	</p>
+																@endif
+															</div>
+														</div>
 
-                              <div class="col-sm-6">
-                                <div class="form-group">
-                                  <label for="report_type">Report Type*</label>
-                                  <select class="custom-select form-control-border" 
-                                  placeholder="Report Type"
-                                  value="{{old('report_type')}}" name="report_type" id="report_type">
-                                    <option value="0">Select</option>
-                                    <option value="weekly">Weekly</option>
-                                    <option value="monthly">Monthly</option>
-                                    <option value="quarter">Quarterly</option>
-                                    <option value="half_year">Half Year</option>
-                                    <option value="annual">annual</option>
-                                    <option value="completion">Completion</option>
-                                    <option value="special">Special</option>
-                                  </select>
-                                  @if($errors->has('report_type'))
-                                    <p class="help-block text-red">
-                                    {{ $errors->first('report_type') }}
-                                    </p>
-                                  @endif  
-                                </div>
-                              </div>
-                            </div>
-      
-                            <div class="row">
-                              <div class="col-sm-12">
-                                <div class="form-group">
-                                  <label for="report_title">Report Title*</label>
-                                  <input type="text" class="form-control" value="{{old('report_title')}}" id="report_title" name="report_title" placeholder= "Project title">
-                                  @if($errors->has('report_title'))
-                                    <p class="help-block text-red">
-                                    {{ $errors->first('report_title') }}
-                                    </p>
-                                  @endif
-                                </div>
-                              </div>
-                            </div>
-      
-                            <div class="row">
-                              <div class="col-sm-4">
-                                <div class="form-group">
-                                  <label for="start_date">From Date*</label>
-                                  <input type="date" class="form-control" value="{{old('date_from')}}" id="date_from" name="date_from" placeholder= "From Date">
-                                  @if($errors->has('date_from'))
-                                    <p class="help-block text-red">
-                                    {{ $errors->first('date_from') }}
-                                    </p>
-                                  @endif
-                                </div>
-                              </div>
-      
-                              <div class="col-sm-4">
-                                <div class="form-group">
-                                  <label for="end_date">To Date*</label>
-                                  <input type="date" class="form-control" value="{{old('date_to')}}" id="date_to" name="date_to" placeholder= "To Date">
-                                  @if($errors->has('date_to'))
-                                    <p class="help-block text-red">
-                                    {{ $errors->first('date_to') }}
-                                    </p>
-                                  @endif
-                                </div>
-                              </div>
-      
+														<div class="col-sm-4">
+															<div class="form-group">
+																<label for="end_date">To Date*</label>
+																<input type="date" class="form-control" value="{{old('date_to')}}" id="date_to" name="date_to" placeholder= "To Date">
+																@if($errors->has('date_to'))
+																	<p class="help-block text-red">
+																	{{ $errors->first('date_to') }}
+																	</p>
+																@endif
+															</div>
+														</div>
 
+														<div class="col-sm-4">
+															<div class="form-group">
+																<label for="reportfile">Project File</label>
+																<div class="custom-file">
+																	<input type="file" class="custom-file-input" enctype="multipart/form-data"
+																	name="reportfile" id="reportfile">
+																	<label class="custom-file-label" for="reportfile">Choose File</label>
+																	@if($errors->has('reportfile'))
+																		<p class="help-block text-red">
+																		{{ $errors->first('reportfile') }}
+																		</p>
+																	@endif
+																</div>
+															</div>
+														</div>
+													</div>
+								
+													<div class="form-group">
+														<label for="spcomments">Notes, if any</label>
+														<input type="text" class="form-control" value="{{old('spcomments')}}" 
+														id="spcomments" name="spcomments" placeholder= "Remarks, if any">
+														@if($errors->has('spcomments'))
+															<p class="help-block text-red">
+															{{ $errors->first('spcomments') }}
+															</p>
+														@endif
+													</div>
 
-
-      
-                              <div class="col-sm-4">
-                                <div class="form-group">
-                                  <label for="reportfile">Project File</label>
-                                  <div class="custom-file">
-                                    <input type="file" class="custom-file-input" enctype="multipart/form-data"
-                                     name="reportfile" id="reportfile">
-                                    <label class="custom-file-label" for="reportfile">Choose File</label>
-                                    @if($errors->has('reportfile'))
-                                      <p class="help-block text-red">
-                                      {{ $errors->first('reportfile') }}
-                                      </p>
-                                    @endif
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                        
-                            <div class="form-group">
-                              <label for="spcomments">Notes, if any</label>
-                              <input type="text" class="form-control" value="{{old('spcomments')}}" 
-                              id="spcomments" name="spcomments" placeholder= "Remarks, if any">
-                              @if($errors->has('spcomments'))
-                                <p class="help-block text-red">
-                                {{ $errors->first('spcomments') }}
-                                </p>
-                              @endif
-                            </div>
-      
-      
-                            <div class="card-footer">
-                              <button type="submit" class="btn btn-primary">Submit</button>
-                            </div>
-
-
-
+													<div class="card-footer">
+														<button type="submit" class="btn btn-primary">Submit</button>
+													</div>
+												</div>
+											</form>
 										</div>
 									</div>
 								</div><!-- /.card-body -->
-							</div>
-							<!-- /.card -->
-							<!-- /.card -->
+							</div><!-- /.card -->
 						</section>
 						<!-- /.Left col -->
 						<!-- right col -->
@@ -272,8 +259,6 @@
 	</main>
 @stop
 
-
-
 @section('js')
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="js/scripts.js"></script>
@@ -281,9 +266,48 @@
 <script src="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/umd/simple-datatables.min.js" crossorigin="anonymous"></script>
 <script src="{{ asset('components/dist/js/datatables-simple-demo.js') }}"></script>
 <script src="{{ asset('plugins/bs-custom-file-input/bs-custom-file-input.min.js') }}"></script>
+<!-- jQuery -->
+<!-- Bootstrap 4 -->
+<!-- DataTables  & Plugins -->
+<script src="{{ asset('plugins/datatables/jquery.dataTables.min.js') }}"></script>
+<script src="{{ asset('plugins/datatables-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('plugins/datatables-responsive/js/dataTables.responsive.min.js') }}"></script>
+<script src="{{ asset('plugins/datatables-responsive/js/responsive.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('plugins/datatables-buttons/js/dataTables.buttons.min.js') }}"></script>
+<script src="{{ asset('plugins/datatables-buttons/js/buttons.bootstrap4.min.js') }}"></script>
+<script src="{{ asset('plugins/jszip/jszip.min.js') }}"></script>
+<script src="{{ asset('plugins/pdfmake/pdfmake.min.js') }}"></script>
+<script src="{{ asset('plugins/pdfmake/vfs_fonts.js') }}"></script>
+<script src="{{ asset('plugins/datatables-buttons/js/buttons.html5.min.js') }}"></script>
+<script src="{{ asset('plugins/datatables-buttons/js/buttons.print.min.js') }}"></script>
+<script src="{{ asset('plugins/datatables-buttons/js/buttons.colVis.min.js') }}"></script>
+<!-- AdminLTE App -->
+<script src="{{ asset('dist/js/adminlte.min.js') }}"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="{{ asset('dist/js/demo.js') }}"></script>
+
+<!-- Page specific script -->
+
 <script>
   $(function () {
     bsCustomFileInput.init();
   });
   </script>
+	<script>
+		$(function () {
+			$("#example1").DataTable({
+				"responsive": true, "lengthChange": false, "autoWidth": false,
+				"buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
+			}).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
+			$('#example2').DataTable({
+				"paging": true,
+				"lengthChange": false,
+				"searching": false,
+				"ordering": true,
+				"info": true,
+				"autoWidth": false,
+				"responsive": true,
+			});
+		});
+	</script>
 @stop

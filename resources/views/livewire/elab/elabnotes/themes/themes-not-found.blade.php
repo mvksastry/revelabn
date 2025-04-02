@@ -2,7 +2,7 @@
   <thead>
     <tr>
       <th colspan="5">
-        Project: " <b class="text-warning"> {{ $project_title }} </b>" Input Fields with * Mandatory
+        Project: " <b class="text-warning"> {{ $resproject_title }} </b>" Input Fields with * Mandatory
       </th>
     </tr>
   </thead>

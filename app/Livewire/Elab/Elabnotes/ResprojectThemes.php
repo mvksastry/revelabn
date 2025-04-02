@@ -31,6 +31,7 @@ use App\Models\Elab\Exptimage;
 use App\Models\Elab\Exptfile;
 use App\Models\Elab\Exptnote;
 use App\Models\Elab\Exptsample;
+use App\Models\Elab\Labfile;
 use App\Models\Elab\Procedure;
 use App\Models\Elab\Products;
 use App\Models\Elab\Protocol;
@@ -701,6 +702,11 @@ class ResprojectThemes extends Component
 				}				
 
 				$this->dispatch('swal.confirm', ['title'=>'All Updates Completed']);
+
+				//now upload files at the time of creation of experiment.
+				$this->uploadLabfiles($exptId);
+
+				//no reset forms
 				$this->resetNewExptForm();
 				$this->searchResultBox1 = false;
 				$this->searchResultBox2 = false;
@@ -749,6 +755,7 @@ class ResprojectThemes extends Component
 
 		if($eun != null) 
 		{
+			/*
 			if(count($this->exptFiles) > 0)
 			{
 				$allowedfileExtension = ['jpeg', 'jpg', 'tiff', 'png', 'pdf', 'doc', 'docx','xls', 'xlsx', 'txt'];
@@ -765,13 +772,14 @@ class ResprojectThemes extends Component
 					{
 						$destFolder = "";
 						$fileName = "";
-						$destFolder = $this->getExtensionLinedFolder($oExt);
+						$destFolder = $this->getExtensionLinkedFolder($oExt);
 						
 						$code8 = $this->generateCode(8);
 						$fileName = $code8."_"."Expt".$expt_id.".".$oExt;
 						$fxt[$key] = $value->storeAs($destFolder, $fileName);
 						
-						//now insert data into db
+						//now insert data into db 
+						//remove this images and replace with exptfiles below.
 						$newimageFile = new Exptimage();
 						$newimageFile->experiment_id = $expt_id;
 						$newimageFile->user_id = Auth::user()->id;
@@ -806,7 +814,10 @@ class ResprojectThemes extends Component
 					}
 				}
 			}
-			
+			*/
+			//upload any files attached.
+			$this->uploadLabfiles($expt_id);
+
 			$newNotes = new Exptnote();
 			$newNotes->user_id = Auth::user()->id;
 			$newNotes->user_name = Auth::user()->name;
@@ -830,7 +841,109 @@ class ResprojectThemes extends Component
 		}
 	}
 
-	public function getExtensionLinedFolder($extension)
+
+	public function uploadLabfiles($exptId)
+	{
+		if(count($this->exptFiles) > 0)
+		{
+			$allowedfileExtension = ['jpeg', 'jpg', 'tiff', 'png', 'pdf', 'doc', 'docx','xls', 'xlsx', 'txt'];
+
+			$documentSubCategories = ['report', 'image', 'procedure', 'protocol', 'literature'];
+			//for testing, in reality, pass on the user's folder name fromm DB.
+
+			foreach ($this->exptFiles as $key => $value) 
+			{
+				$filename = $value->getClientOriginalName();
+				$oExt = $value->getClientOriginalExtension();
+				
+				$check=in_array($oExt, $allowedfileExtension);
+
+				if($check )
+				{
+					$images = ['jpeg', 'jpg', 'tiff', 'png'];
+
+					if(in_array($oExt, $images))
+					{
+						$category = "image";
+						$sub_category = null;
+					}
+					else {
+						$category = "document";
+						$sub_category = "literature";
+					}
+
+					$destFolder = "";
+					$fileName = "";
+					$destFolder = $this->getExtensionLinkedFolder($oExt, $exptId);
+					
+					$code8 = $this->generateCode(8);
+					$fileName = $code8."_"."Expt".$exptId.".".$oExt;
+					$fxt[$key] = $value->storeAs($destFolder, $fileName);
+					
+					//now insert data into db 
+					//remove this images and replace with exptfiles below.
+					/*
+					$newimageFile = new Exptimage();
+					$newimageFile->experiment_id = $expt_id;
+					$newimageFile->user_id = Auth::user()->id;
+					$newimageFile->user_name = Auth::user()->name;
+					$newimageFile->entry_date = date('Y-m-d');
+					$newimageFile->image_file = $fileName;
+					$newimageFile->video_file = $fileName;
+					$newimageFile->notes = "none";
+					$newimageFile->path = $destFolder;
+					//dd($newimageFile);
+					$newimageFile->save();
+					*/
+
+					/*
+					$newExptFile = new Exptfile();
+					$newExptFile->experiment_id = $expt_id;
+					$newExptFile->user_id = Auth::user()->id;
+					$newExptFile->user_name = Auth::user()->name;
+					$newExptFile->entry_date = date('Y-m-d');
+					$newExptFile->file_type = $oExt;
+					$newExptFile->file_name = $fileName;
+					$newExptFile->description = "";
+					$newExptFile->legend = "";
+					$newExptFile->notes = "none";
+					$newExptFile->path = $destFolder;
+					//dd($newimageFile);
+					$newExptFile->save();
+					*/
+
+					$nLabFile = new Labfile();
+					$nLabFile->uuid           = Str::uuid()->toString();
+					$nLabFile->category       = $category;
+					$nLabFile->sub_category   = $sub_category;
+					$nLabFile->resproject_id  = $this->resproject_id;
+					$nLabFile->iaecproject_id = null;
+					$nLabFile->experiment_id  = $exptId;
+					$nLabFile->notebook_id    = null;
+					$nLabFile->file_type      = $oExt;
+					$nLabFile->file_name      = $fileName;
+					$nLabFile->user_id        = Auth::user()->id;
+					$nLabFile->user_name      = Auth::user()->name;
+					$nLabFile->date_submitted = date('Y-m-d');
+					$nLabFile->file_path      = $destFolder;
+					//dd($nLabFile);
+					$nLabFile->save(); 
+
+					Log::channel('activity')->info("[ ".tenant('id')." ] [ ".Auth::user()->name.' ] saved file for experiment id [ '.$exptId.' ]');
+				}
+				else {
+					$this->icMessage = "File types must be jpeg, jpg, tiff, png and pdf";
+					$this->dispatch('swal.confirm',['title'=>$this->icMessage]);
+				}
+			}
+		}
+		else {
+			$this->icMessage = "File Not Attached";
+			$this->dispatch('swal.confirm',['title'=>$this->icMessage]);
+		}
+	}
+
+	public function getExtensionLinkedFolder($extension, $exptId)
 	{
 		$images = ['jpg', 'jpeg', 'tiff', 'png'];
 		$documents = ['pdf', 'doc', 'docx','xls', 'xlsx', 'txt'];
@@ -854,7 +967,7 @@ class ResprojectThemes extends Component
 		{
 			$sub_base = "videos/";
 		}
-		$destPath = $base.$sub_base.$this->expt_id."/";
+		$destPath = $base.$sub_base.$exptId."/";
 		return $destPath;
 	}
 

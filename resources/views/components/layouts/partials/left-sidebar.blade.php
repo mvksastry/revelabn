@@ -227,7 +227,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/manage-labfiles" class="nav-link">
               <i class="nav-icon fas fa-tree"></i>
               <p>
                 Images
@@ -237,7 +237,7 @@
           </li>
 
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="/manage-labfiles" class="nav-link">
               <i class="nav-icon fas fa-tree"></i>
               <p>
                 Documents

@@ -40,3 +40,6 @@
 [2025-04-02 18:40:19] local.INFO: [ demo ] [ Demo PISG ] displayed Experiment list  
 [2025-04-02 18:40:25] local.INFO: [ demo ] [ Demo PISG ] Displayed Info for Experiment [4]  
 [2025-04-02 18:40:25] local.INFO: [ demo ] [ Demo PISG ] Displayed Info for Experiment [ 4 ]  
+[2025-04-02 19:05:33] local.INFO: [ demo ] [ Demo PISG ] requested image file [ expts/documents/4/VVag6Uz8_Expt4.pdf ]  
+[2025-04-02 19:05:39] local.INFO: [ demo ] [ Demo PISG ] requested image file [ expts/documents/4/QBANVrNJ_Expt4.pdf ]  
+[2025-04-02 19:05:45] local.INFO: [ demo ] [ Demo PISG ] requested image file [ expts/documents/4/XchanwKS_Expt4.docx ]  

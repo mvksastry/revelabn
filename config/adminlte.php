@@ -515,13 +515,13 @@ return [
         
         [
             'text' => 'Images',
-            'url' => 'admin/settings',
+            'url' => 'manage-labfiles',
             'icon' => 'fas fa-fw fa-lock',
         ],
 
         [
             'text' => 'Documents',
-            'url' => 'admin/settings',
+            'url' => 'manage-labfiles',
             'icon' => 'fas fa-fw fa-lock',
         ],
 

@@ -728,7 +728,7 @@ class ResprojectThemes extends Component
 	////// Download functions 
 	public function exptFileDownload($path)
 	{
-		dd($path);
+		//dd($path);
     //log activity
     Log::channel('activity')->info("[ ".tenant('id')." ] [ ".Auth::user()->name.' ] requested image file [ '.$path.' ]');
         

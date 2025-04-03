@@ -38,6 +38,8 @@ use App\Livewire\Reagents\MakeNewReagent;
 use App\Livewire\Reagents\RemakeReagent;
 use App\Livewire\Reagents\UpdateReagentUsage;
 
+use App\Livewire\Documents\ManageLabfiles;
+
 use App\Livewire\Elab\Common\ManageTasks;
 use App\Livewire\Elab\Common\LogBook;
 
@@ -193,6 +195,9 @@ Route::middleware([
 
       Route::get('/log-book',              App\Livewire\Elab\Common\LogBook::class);
       Route::get('/manage-tasks',          App\Livewire\Elab\Common\ManageTasks::class);
+
+      Route::get('/manage-labfiles',       App\Livewire\Documents\ManageLabfiles::class);
+
     //-- --------------------- --//
 
 
